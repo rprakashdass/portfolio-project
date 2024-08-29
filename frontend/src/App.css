@@ -1,21 +1,200 @@
-.App {
+html{
+  background-color:rgb(8, 7, 7);
+  color: white;
+  overflow-x: hidden;
+  text-transform: capitalize;
+}
+
+:root{
+  /* --title: #130a1b; */
+  --title: #8a2be2;
+}
+
+/* Common Styles */
+a{
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title{
+  color: var(--title);
+  align-content: center
+}
+
+#title-grad {
+  height: 50px;
+  width: 50%;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), #130a1b);
+}
+
+.center{
   text-align: center;
 }
 
-.header{
-  border: 1px dashed #61dafb;
-  padding: 30px;
+.pointer{
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.active{
+    color: aqua;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
 }
+
+/* skills grid */
+
+.section-left{
+  display: grid;
+  grid-template-areas: "headline content";
+  grid-template-columns: 25% 75%;
+}
+
+.section-right{
+  display: grid;
+  grid-template-areas: "content headline";
+  grid-template-columns: 75% 25%;
+}
+
+.headline{
+  grid-area: "headline";
+  font-weight: 100;
+  text-align: right;
+  color: blueviolet;
+}
+
+.headline h1{
+  bottom: auto;
+}
+
+.content{
+  margin-left: 20px;
+  border-left: 3px solid blueviolet;
+  grid-area: "content";
+  color: white;
+}
+
+.skills ul{
+  list-style-type: none;
+  line-height: 50px;
+  /* list-style-image: url('./images/'); */
+}
+
+/* .skills ul li{
+  list-style-image: url('./images/');
+} */
+/* Profile Section */
+
+.about{
+  overflow: hidden;
+}
+
+.i-container {
+  float: left;
+  width: 30%;
+  height: 30em;
+  margin-right: 150px;
+}
+
+.i-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.about-text{
+  position: relative;
+  padding-left : 100px;
+  padding-top: 120px;
+  text-transform: capitalize;
+  height: 24em;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Project Section */
+
+.project-sec {
+  display: flex;
+  gap: 20px;
+  color: rgb(21, 158, 163);
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-evenly;
+}
+
+.project-sec .project {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+.project-sec .project img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Social Media Section */
+
+.social-media{
+  background-color: #0e0c0c;
+  /* background-color: #050505; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-right: -100px;
+  margin-left: -100px;
+  padding-left: 50px;
+}
+
+.social-media .items img{
+  width: 50%;
+  height: auto;
+}
+
+.profile-cards{
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 2 ;
+  gap: 20px;
+}
+
+.profile-cards .item{
+  display: flex;
+    flex: 1 1 calc(35% - 20px);
+  max-width: calc(35% - 20px);
+  /* gap: 20px; */
+  flex-direction: column;
+  position: relative;
+  background-color: #0e0c0c;
+  justify-content: space-around;
+  align-items:center
+}
+
+.profile-cards .item img{
+  width: auto;
+  height: auto;
+}
+
+.profile-cards .item p{
+  padding: 0px 20px;
+}
+
+
+/* Footer */
+
+footer{
+  padding: 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+}
+
+/* Media Queries */
+
+/* @media scree */
