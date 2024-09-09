@@ -20,7 +20,7 @@ const projects = [
         'link' : 'https://www.kaggle.com/rprakashdass/competitions',
         'imglink' : hd,
     },
-    {   
+    {
         'title' : 'Diabetic Prediction - Streamlit',
         'decription' : 'This is Description You can Log in and View  my profile',
         'link' : 'https://github.com/rprakashdass/Diabetic-Prediction',
@@ -73,7 +73,6 @@ export default function Projects() {
         );
     }
     const [openModal, setOpenModal] = useState(false);
-    
     return (
         <>
             {openModal && <Modal/>}
