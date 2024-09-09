@@ -5,11 +5,12 @@ import nlp from './images/projects/nlp.jpeg';
 import vas from './images/projects/virtual_assistant.jpeg';
 import cms from './images/projects/cms.jpeg';
 import face from './images/projects/face.jpeg';
+import { useState } from 'react';
 
 const projects = [
     {
         'title' : 'Excel Data Uploader',
-        'decription' : '',
+        'decription' : 'yep, this is the project description',
         'link' : 'https://www.kaggle.com/rprakashdass/competitions',
         'imglink' : excel,
     },
@@ -19,7 +20,7 @@ const projects = [
         'link' : 'https://www.kaggle.com/rprakashdass/competitions',
         'imglink' : hd,
     },
-    {
+    {   
         'title' : 'Diabetic Prediction - Streamlit',
         'decription' : 'This is Description You can Log in and View  my profile',
         'link' : 'https://github.com/rprakashdass/Diabetic-Prediction',
@@ -51,22 +52,43 @@ const projects = [
     },
 ]
 
+
 export default function Projects() {
-    const showDesc = () => {
-        return(
-            <>
-                <h2>Hi hello jnjewfg vhjfhg hgvj</h2>
-            </>
-        )
+    function Modal(){
+        const modelStyle = {
+            position : "relative",
+            color : "white",
+            zIndex : 9999,
+            margin: "0 auto",
+        }
+        return (
+            <div style={modelStyle}>
+                <button style={{color:"violet"}} onClick={()=>{setOpenModal(false)}}>X</button>
+                <h2 className='title'>Project Name</h2>
+                <hr></hr>
+                <h3>Description</h3>
+                <p>List the project description </p>
+                <p>This the image</p>
+            </div>
+        );
     }
+    const [openModal, setOpenModal] = useState(false);
+    
     return (
+        <>
+            {openModal && <Modal/>}
         <div id='projects' className='project-sec'>
             {projects.map((project, index) => (
-                <div key={project.index} className='project' onClick={showDesc}>
+                <div key={project.index} className='project' onClick={
+                    ()=>{
+                        setOpenModal(true);
+                    }
+                } style={{backgroundColor : "blue"}}>
                     <img src={project.imglink} alt='pic instead' className="pointer" />
-                    <a href={project.link}><h4 className='center'>{project.title}</h4></a>
+                    {/* <a href={project.link}><h4 className='center'>{project.title}</h4></a> */}
                 </div>
             ))}
         </div>
+    </>
     );
 }
