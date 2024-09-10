@@ -23,7 +23,7 @@ export default function QuotesGenerator(){
         color: "white",
         backgroundColor: "blueviolet",
         cursor: "pointer",
-        marigin: "0.9%"
+        margin: "0.9%"
     }
 
     const next = () => {setIndex((index + 1) % quotes.length);}

@@ -9,28 +9,37 @@ import QuotesGenerator from './inspirationGenerator.js';
 import Footer from './footer.js';
 
 function App() {
-  const sectionStyle = {
+  const sliderSectionStyle = {
     width: "700px",
     height: "400px",
     margin: "0 auto",
+  }
+  const sectionStyle = {
+    padding: "4%"
   }
   return (
     <div className="App">
       <TopNav/>
       <Body>
         <About/>
+
         <h2 className='title' id='title-grad'>Skills</h2>
         <Skills/>
-        <hr style={{marginTop:"180px", marginBottom:"140px", color:"#130a1b"}}/>
-        <div style={sectionStyle}>
-          <h2 class="center" style={{color:"grey", fontWeight:100}}>Know more</h2>
+
+        <hr style={{marginTop:"180px", marginBottom:"100px", color:"#130a1b"}}/>
+
+        <h2 class="center" style={{color:"grey", fontWeight:100, marginTop: "100px"}}>Know more</h2>
+        <div style={sliderSectionStyle}>
           <ImageSlider/>
         </div>
-        <hr style={{marginTop:"180px", color:"#130a1b"}}/>
-        <h2 className='title' id='titl  e-grad'>Projects</h2>
-        <Projects/>
-        <h2 className='title' id='title-grad'>Social Media</h2>
-        <SocialMedia/>
+        <h2 className='title' style={{marginTop: "100px"}} id='title-grad'>Projects</h2>
+        <div style={sectionStyle}>
+          <Projects/>
+        </div>
+        <h2 className='title' style={{marginTop: "100px"}} id='title-grad'>Social Media</h2>
+        <div style={sectionStyle}>
+          <SocialMedia/>
+        </div>
       </Body>
       <Footer>
         <QuotesGenerator/>
@@ -54,8 +63,8 @@ function About(){
         <img src={require('./images/me.png')} alt='My Profile'></img>
       </div>
       <div className='about-text'>
-        <h1 className='title'>I'm Prakash Dass R</h1>
-        <p>Iam a pasionate AIML engineer, i welcome to my portfolio. Let us make bigger innovation all together. I am an aspiring Machine learning engineer who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have strong technical skills and an academic background in engineering, statistics, and machine learning. My passion lies in solving business problems with tailored data and algorithms and communicating complex ideas to non-technical stakeholders. I am able to jump across verticals to deliver high-performing AI solutions.</p>
+        <h1 className='title' style={{fontSize: "50px"}}>I'm Prakash Dass R</h1>
+        <p style={{fontSize: "18px"}}>Iam a pasionate AIML engineer, i welcome to my portfolio. Let us make bigger innovation all together. I am an aspiring Machine learning engineer who enjoys connecting the dots: be it ideas from different disciplines, people from different teams, or applications from different industries. I have strong technical skills and an academic background in engineering, statistics, and machine learning. My passion lies in solving business problems with tailored data and algorithms and communicating complex ideas to non-technical stakeholders. I am able to jump across verticals to deliver high-performing AI solutions.</p>
       </div>
   </section>
   );

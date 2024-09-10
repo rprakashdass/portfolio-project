@@ -3,6 +3,7 @@ import kalam from './images/personal/StepUp_kalam_2k24.jpg';
 import bb from './images/personal/ballbadminton1.jpg';
 import hd from './images/projects/handwriten.jpeg';
 import n from './images/projects/nlp.jpeg';
+import './frontBackIcon.css';
 
 export default function ImageSlider() {
     const [currentInd, setCurrentInd] = useState(0);
@@ -15,10 +16,9 @@ export default function ImageSlider() {
     ];
 
     useEffect(() => {
-        const intervalId = setInterval(goToNext, 3000); // Change slide every 1 second
-
+        const intervalId = setInterval(goToNext, 5000); // Change slide every 0.5 second
         return () => clearInterval(intervalId);
-    }, [currentInd]); // Depend on currentInd to reset the interval on every change
+    }, [currentInd]);
 
     const slideStyle = {
         width: "100%",
@@ -47,23 +47,25 @@ export default function ImageSlider() {
     };
 
     const descriptionStyle = {
-        position: "absolute",
-        top: "70%",
-        width: "100%",
+        // position: "absolute",
+        // top: "70%",
+        // width: "100%",
         textAlign: "center",
-        color: "blueviolet",
-        fontSize: "30px",
+        color: "white",
+        fontSize: "20px",
     };
 
     return (
-        <div style={containerStyle}>
-            <div style={slideStyle}>
-                <div style={{left: "30px", color: "blueviolet", position: "absolute", top: "50%", fontSize: "55px", cursor: "pointer"}} onClick={goToPrevious}>&lt;</div>
-                <div style={{right: "30px", color: "blueviolet", position: "absolute", top: "50%", fontSize: "55px", cursor: "pointer"}} onClick={goToNext}>&gt;</div>
+        <>
+            <div style={containerStyle}>
+                <div style={slideStyle}>
+                    <div style={{left: "30px", position: "absolute", top: "50%", cursor: "pointer"}} className='gg-arrow-left-o' onClick={goToPrevious}></div>
+                    <div style={{right: "30px", position: "absolute", top: "50%", cursor: "pointer"}} className='gg-arrow-right-o' onClick={goToNext}></div>
+                </div>
             </div>
             <div style={descriptionStyle}>
-                {slides[currentInd].des}
+                    {slides[currentInd].des}
             </div>
-        </div>
+        </>
     );
 }
