@@ -5,8 +5,8 @@ import SocialMedia from './socialmedia';
 import Projects from './projects.js';
 import ImageSlider from './imageSlider.js';
 import React from "react";
-// import {Route} from "react-router-dom";
-
+import QuotesGenerator from './inspirationGenerator.js';
+import Footer from './footer.js';
 
 function App() {
   const sectionStyle = {
@@ -27,12 +27,14 @@ function App() {
           <ImageSlider/>
         </div>
         <hr style={{marginTop:"180px", color:"#130a1b"}}/>
-        <h2 className='title' id='title-grad'>Projects</h2>
+        <h2 className='title' id='titl  e-grad'>Projects</h2>
         <Projects/>
         <h2 className='title' id='title-grad'>Social Media</h2>
         <SocialMedia/>
       </Body>
-      <Footer/>
+      <Footer>
+        <QuotesGenerator/>
+      </Footer>
     </div>
   );
 }
@@ -57,16 +59,6 @@ function About(){
       </div>
   </section>
   );
-}
-
-function Footer(){
-  return(
-    <footer id='contact' className='footer'>
-      <div className='center'>
-        <a href="mailto:rprakashdass@gmail.com?body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">Send Collaboration Request</a>
-      </div>
-    </footer>
-  )
 }
 
 export default App;

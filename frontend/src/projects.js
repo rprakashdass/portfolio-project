@@ -56,10 +56,15 @@ const projects = [
 export default function Projects() {
     function Modal(){
         const modelStyle = {
-            position : "relative",
+            position : "absolute",
             color : "white",
-            zIndex : 9999,
-            margin: "0 auto",
+            zIndex : 1,
+            top: "auto",
+            bottom: "auto",
+            left: "auto",
+            right: "auto",
+            backgroundColor: "black",
+            padding: "2%",
         }
         return (
             <div style={modelStyle}>
