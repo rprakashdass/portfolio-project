@@ -12,9 +12,9 @@ import App from './App.jsx'
 import JQueryButton from './components/practice.tsx'
 
 const route = createBrowserRouter([
-  {path: "/", element: <App/>},
+  {path: "/portfolio/", element: <App/>},
   // {path: "/private", element: <RampexMERNTraining/>}
-  {path: "/test", element: <JQueryButton/>}
+  {path: "/portfolio/test", element: <JQueryButton/>}
 ])
 
 createRoot(document.getElementById('root')).render(
