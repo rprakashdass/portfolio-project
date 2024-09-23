@@ -1,89 +1,130 @@
-const experienceData = [
-  {
-      company: "Rotaract Club of Sri Shakthi Institute",
-      logo: "path/to/logo.png", // Replace with actual logo path
-      position: "Community Service Director",
-      location: "Coimbatore, India",
-      contract: "Volunteer",
-      period: {
-          from: new Date(2023, 0), // January 2023
-          to: new Date(2024, 0) // January 2024
-      },
-      shortDescription: "Leading community service initiatives.",
-      skills: [
-          { name: "Leadership", logo: "path/to/leadership-icon.png" }, // Replace with actual icon path
-          // Add more skills as needed
-      ],
-  },
-  {
-      company: "Rotaract Club of Sri Shakthi Institute",
-      logo: "path/to/logo.png",
-      position: "All Avenue Chair",
-      location: "Coimbatore, India",
-      contract: "Volunteer",
-      period: {
-          from: new Date(2024, 0), // January 2024
-          to: null // Present
-      },
-      shortDescription: "Overseeing all avenues of service.",
-      skills: [
-          { name: "Coordination", logo: "path/to/coordination-icon.png" }, // Replace with actual icon path
-          // Add more skills as needed
-      ],
-  },
-];
-
-
 import PropTypes from 'prop-types';
-// import { useState } from 'react';
-// import { Icon } from 'lucide-react'; // Adjust according to your import path
+import { GraduationCap } from 'lucide-react';
+// import { Volunteer } from 'lucide-react';
 
-const EducationExperience = ({ experience }) => {
-    const { company, logo, position, location, contract, period, shortDescription, skills } = experience;
 
-    const from = `${period.from.getMonth() + 1}/${period.from.getFullYear()}`;
-    const to = period.to ? `${period.to.getMonth() + 1}/${period.to.getFullYear()}` : 'Present';
+
+const cardStyle = {
+  borderRadius: "15px",
+  padding: "20px",
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+  marginBottom: "20px",
+  display: "flex",
+  alignItems: "center"
+};
+
+  const contentStyle = {
+    flex: 1,
+    textAlign: "left"
+  };
+
+  const titleStyle = {
+    fontWeight: "bold",
+    fontSize: "1.5rem",
+    color: "#a1c2bd"
+  };
+
+  const subtitleStyle = {
+    fontSize: "1.2rem",
+    color: "#6c757d",
+    marginBottom: "10px"
+  };
+
+  const yearStyle = {
+    fontSize: "1rem",
+    color: "#6c757d",
+    fontStyle: "italic",
+    marginBottom: "10px"
+  };
+
+  const sectionStyle = {
+    margin: "0 10%",
+}
+
+const borderStyle = {
+    border: "1px solid #fff",
+    borderRadius: "10px",
+    padding: "3%",
+}
+
+const EducationCard = ({ degree, institution, year, description }) => {
+
+  return (
+    <div style={cardStyle} className="education-card">
+      <div style={contentStyle}>
+        <h3 style={titleStyle}>
+          <GraduationCap size={28} className="me-2" />
+          {degree}
+        </h3>
+        <h4 style={subtitleStyle}>{institution}</h4>
+        <p style={yearStyle}>{year}</p>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};
+
+EducationCard.propTypes = {
+    degree: PropTypes.string.isRequired,
+    institution: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  };
+
+
+  const VolunteerExperienceCard = ({ role, organization, year, description }) => {
 
     return (
-        <div className="experience-card">
-            <img src={logo} alt={`${company} logo`} className="experience-logo" />
-            <h3>{position} at {company}</h3>
-            <p>{location}</p>
-            <p>{contract}</p>
-            <p>{from} - {to}</p>
-            <p>{shortDescription}</p>
-            <div className="skills">
-                {skills.map(skill => (
-                    <div key={skill.name} className="skill">
-                        <img src={skill.logo} alt={`${skill.name} icon`} />
-                        <span>{skill.name}</span>
-                    </div>
-                ))}
-            </div>
+      <div style={cardStyle} className="volunteer-experience-card">
+        <div style={contentStyle}>
+          <h3 style={titleStyle}>
+            {role}
+          </h3>
+          <h4 style={subtitleStyle}>{organization}</h4>
+          <p style={yearStyle}>{year}</p>
+          <p>{description}</p>
         </div>
+      </div>
     );
-};
+  };
 
-EducationExperience.propTypes = {
-    experience: PropTypes.shape({
-        company: PropTypes.string.isRequired,
-        logo: PropTypes.string.isRequired,
-        position: PropTypes.string.isRequired,
-        location: PropTypes.string.isRequired,
-        contract: PropTypes.string.isRequired,
-        period: PropTypes.shape({
-            from: PropTypes.instanceOf(Date).isRequired,
-            to: PropTypes.instanceOf(Date),
-        }).isRequired,
-        shortDescription: PropTypes.string.isRequired,
-        skills: PropTypes.arrayOf(
-            PropTypes.shape({
-                name: PropTypes.string.isRequired,
-                logo: PropTypes.string.isRequired,
-            })
-        ).isRequired,
-    }).isRequired,
-};
+  VolunteerExperienceCard.propTypes = {
+    role: PropTypes.string.isRequired,
+    organization: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    logo: PropTypes.string,
+  };
 
+function EducationSection() {
+    return (
+        <section className='' style={sectionStyle}>
+        <div className="education-section" style={borderStyle}>
+            <h2 className="text-white">Academics</h2>
+            <EducationCard
+            degree="Bachelor of Technology in Artificial Intelligence and Machine Learning"
+            institution="Sri Shakthi Institute of Engineering and Technology"
+            year="2022 - 2026"
+            description="Specializing in AI/ML, covering deep learning, computer vision, and data science."
+            />
+        </div>
+        <div className='mt-5' style={borderStyle}>
+            <h2 className="text-white">Volunteer Experience</h2>
+            <VolunteerExperienceCard
+                role="Community Service Director"
+                organization="Rotaract Club of Sri Shakthi Institute"
+                year="2023 - 2024"
+                description="Led various community service projects and initiatives."
+            />
+            <VolunteerExperienceCard
+                role="All Avenue Chair"
+                organization="Rotaract Club of Sri Shakthi Institute"
+                year="2024 - Present"
+                description="Had an opportunity to conduct sustainable projects for the community."
+            />
+        </div>
+      </section>
+    );
+  }
 
-export default EducationExperience;
+export default EducationSection;

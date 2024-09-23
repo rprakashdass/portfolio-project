@@ -3,9 +3,6 @@ const Header = () => {
         <header className="" style={{position:"fixed" ,borderBottom: "1px solid #2E2E2E", backgroundColor: "#000101", zIndex: "1", width: "100%"}} >
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container">
-                    {/* <a className="navbar-brand fs-3 fw-bold" href="#home">
-                        MyPortfolio
-                    </a> */}
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -23,16 +20,19 @@ const Header = () => {
                                 <a className="nav-link" href="#about">About Me</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link" href="#education">Education</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" href="#skills">Skills</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#projects">Projects</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#social-media">Social Media</a>
+                                <a className="nav-link" href="#resume">Resume</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#resume">Resume</a>
+                                <a className="nav-link" href="#social-media">Social Media</a>
                             </li>
                         </ul>
                     </div>

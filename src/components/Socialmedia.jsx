@@ -4,14 +4,11 @@ import kaggle from '../assets/images/socialMedia/kaggle.png';
 import mail from '../assets/images/socialMedia/so.png';
 import linkedinIcon from '../assets/images/socialMedia/logo_icon.png';
 import githubIcon from '../assets/images/socialMedia/github.png';
-// import linkedin from '../assets/images/socialMedia/linkedin.png';
-// import github from '../assets/images/socialMedia/github.png';
 
-// import { useEffect } from 'react';
-
+// styles
 import '../assets/styles/socialMedia.css'
-import '../assets/styles/connect.css'; // Custom CSS
-// #bfb4b4
+import '../assets/styles/connect.css';
+
 
 const socialmedia = [
     {

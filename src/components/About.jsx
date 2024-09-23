@@ -5,7 +5,7 @@ function About() {
   const containerStyle = {
     textAlign: 'center',
     padding: '5% 10%',
-    backgroundColor: '#1c1c1c', // Dark background for contrast
+    backgroundColor: '#1c1c1c',
     color: '#ffffff',
   };
 
@@ -18,7 +18,7 @@ function About() {
   const highlightText = {
     fontWeight: 'bold',
     fontSize: '36px',
-    color: '#00d1b2', // Accent color for heading
+    color: '#00d1b2',
   };
 
   const descriptionText = {
@@ -48,7 +48,7 @@ function About() {
           I focus on creating cutting-edge AI solutions while fostering innovation. 
           Let’s work together to make impactful innovations!
         </p>
-        <button style={buttonStyle}><a href='#skills'>Explore</a></button>
+        <button style={buttonStyle}><a href='#education'>Explore</a></button>
       </div>
     </section>
   );

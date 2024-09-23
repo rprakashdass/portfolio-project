@@ -2,6 +2,7 @@
 /* --title: #130a1b; */
 /* --title: #8a2be2; */
 --title: #00d1b2;
+--sub-title: #a1c2bd;
 --text-color : #FEFFFE;
 }
 
@@ -37,6 +38,10 @@ align-content: center
     font-weight: bolder;
     font-size: xx-large;
     color: var(--title);
+}
+
+.sub-title{
+    color: var(--sub-title);
 }
 
 .pointer{
