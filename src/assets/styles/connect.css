@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 4rem 2rem;
-    /* background-color: #f9f9f9; */
+    margin: 0 7%;
     flex-wrap: wrap;
 }
 

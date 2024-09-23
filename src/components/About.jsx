@@ -1,29 +1,54 @@
 // Image
-import profile from '../assets/images/me.png'
+import avatar from '/logos/me.png';
 
 function About() {
+  const containerStyle = {
+    textAlign: 'center',
+    padding: '5% 10%',
+    backgroundColor: '#1c1c1c', // Dark background for contrast
+    color: '#ffffff',
+  };
+
+  const avatarStyle = {
+    width: '180px',
+    borderRadius: '50%',
+    marginBottom: '20px',
+  };
+
+  const highlightText = {
+    fontWeight: 'bold',
+    fontSize: '36px',
+    color: '#00d1b2', // Accent color for heading
+  };
+
+  const descriptionText = {
+    fontSize: '18px',
+    lineHeight: '1.6',
+    marginBottom: '30px',
+  };
+
+  const buttonStyle = {
+    backgroundColor: '#00d1b2',
+    border: 'none',
+    borderRadius: '30px',
+    padding: '12px 30px',
+    color: '#fff',
+    cursor: 'pointer',
+    fontSize: '18px',
+    transition: 'background 0.3s ease',
+  };
+
   return (
-    <section id="about" className="row text-light py-5">
-      <div className="col-md-6 d-flex justify-content-center align-items-center">
-        <img
-          src={profile}
-          alt="My Profile"
-          style={{
-            width: '100%',
-            maxWidth: '400px',
-            borderRadius: '50%',
-            objectFit: 'cover',
-          }}
-        />
-      </div>
-      <div className="col-md-6 d-flex flex-column justify-content-center p-5">
-        <h1 className="display-4 mb-4 title">Im Prakash Dass R</h1>
-        <p className="lead">
-          I am a passionate AIML engineer, and I welcome you to my portfolio. Lets make bigger innovations together! 
-          With a strong background in engineering, statistics, and machine learning, I enjoy solving business problems 
-          using tailored data and algorithms. My expertise lies in connecting ideas across disciplines and effectively 
-          communicating complex technical concepts to non-technical stakeholders.
+    <section style={containerStyle}>
+      <div className="about-content">
+        <img src={avatar} alt="Avatar" style={avatarStyle} />
+        <h1 style={highlightText}>Hi, I’m Prakash Dass</h1>
+        <p style={descriptionText}>
+          I’m a passionate AIML engineer dedicated to solving problems through technology. 
+          I focus on creating cutting-edge AI solutions while fostering innovation. 
+          Let’s work together to make impactful innovations!
         </p>
+        <button style={buttonStyle}><a href='#skills'>Explore</a></button>
       </div>
     </section>
   );

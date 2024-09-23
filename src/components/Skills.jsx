@@ -1,45 +1,58 @@
 import '../assets/styles/skills.css';
+import c from '/logos/c.svg';
+import cpp from '/logos/cpp.svg';
+import python from '/logos/python.png';
+import java from '/logos/java.png';
+import html from '/logos/html.svg';
+import css from '/logos/css.svg';
+import bs from '/logos/bootstrap.svg';
+import js from '/logos/js.png';
+import react from '/logos/react.svg';
+import node from '/logos/node.png';
+import dj from '/logos/django.svg';
+import express from '/logos/express.png';
+import flask from '/logos/flask.svg';
+// import mangodb from '/logos/mangodb.svg';
+// import sql from '/logos/sql.svg';
+// import sqlite from '/logos/css.svg';
+// import git from '/logos/css.svg';
+// import figma from '/logos/css.svg';
+import docker from '/logos/docker.svg';
+
+
+
 
 const skills = {
-    'Programming' : [
-        {name: 'C', icon: ''},
-        {name: 'C++', icon: ''},
-        {name: 'Python', icon: ''},
-        {name: 'Java', icon: ''},
+   'programming Languages': [
+        { name: 'C', logo: c },
+        { name: 'C++', logo: cpp },
+        { name: 'Python', logo: python },
+        { name: 'Java', logo: java },
     ],
-
-    'Frontend': [
-        { name: 'HTML', icon: ''},
-        { name: 'CSS', icon: ''},
-        { name: 'Boostrap', icon: ''},
-        { name: 'Javascript', icon: ''},
-        // { name: 'JavaScript', icon: 'Add interactivity and dynamic content to web apps' },
-        // { name: 'Django', icon: 'Python-based framework for backend development' },
-        // { name: 'MERN', icon: 'Full stack development using MongoDB, Express, React, and Node.js' }
+    'webDevelopment': [
+        { name: 'HTML', logo: html },
+        { name: 'CSS', logo: css },
+        { name: 'Bootstrap', logo: bs},
+        { name: 'JavaScript', logo: js },
     ],
-    'Frameworks' : [
-        { name: 'Tensorflow', icon: ''},
-        { name: '', icon: ''},
+    'frameworks': [
+        { name: 'React', logo: react },
+        { name: 'Node.js', logo: node },
+        { name: 'Express.js', logo: express },
+        { name: 'Flask', logo: flask},
+        { name: 'Django', logo: dj },
+        { name: 'Tensorflow', logo: '' },
     ],
-    'Backend': [
-        {name: 'Express', icon: ''},
-        { name: 'MySQL', icon: '' },
-        { name: 'MongoDB', icon: '' },
-        { name: 'Django', icon: ''},
+    'databases': [
+        { name: 'MongoDB', logo: '' },
+        { name: 'MySQL', logo: '' },
+        { name: 'SQLite', logo: '' },
     ],
-    'Machine Learning': [
-        { name: 'Python', icon: '' },
-        { name: 'Scikit-learn', icon: '' },
-        { name: 'Artificial Neural Networks', icon: '' },
-        { name: 'Computer Vision', icon: '' },
-        { name: 'Natural Language Processing', icon: 'Enabling machines to understand and respond to human language' }
+    'tools': [
+        { name: 'Git', logo: '' },
+        { name: 'Docker', logo: docker },
+        { name: 'Figma', logo: '' },
     ],
-    'Artificial Intelligence': [
-        { name: 'Generative Adversarial Networks', icon: 'Deep learning models for generating new data' },
-        { name: 'Natural Language Processing', icon: 'AI systems that understand and process human language' },
-        { name: 'Generative Intelligence', icon: 'AI capable of creating new, innovative outputs' },
-        { name: 'Neural Networks', icon: 'Computational models for AI, simulating biological neurons' }
-    ]
 };
 
 
@@ -50,26 +63,25 @@ function Skills() {
                 {Object.entries(skills).map(([category, skillsList], index) => (
                     <div key={index} className="category-section">
                         <div className="row align-items-center g-3 mb-4">
-                        {/* Left Line */}
-                        <div className="col-auto">
-                            <div className="bg-secondary" style={{ height: '1px', width: '20px' }}></div>
-                        </div>
+                            <div className="col-auto">
+                                <div className="bg-secondary" style={{ height: '1px', width: '20px' }}></div>
+                            </div>
 
-                        {/* Text in the middle */}
-                        <div className="col-auto">
-                            <h6 className="text-secondary mb-0">{category}</h6>
-                        </div>
+                            <div className="col-auto">
+                                <h6 className="text-secondary mb-0">{category}</h6>
+                            </div>
 
-                        {/* Right Line (Flexible Width) */}
-                        <div className="col">
-                            <div className="bg-secondary" style={{ height: '1px', width: '100%' }}></div>
+                            <div className="col">
+                                <div className="bg-secondary" style={{ height: '1px', width: '100%' }}></div>
+                            </div>
                         </div>
-                        </div>
-
                         <div className="cards-wrapper">
                             {skillsList.map((skill, skillIndex) => (
-                                <div className="skill-card" key={skillIndex}>
-                                    <h5 className='mb-0'>{skill.name} <span></span> </h5>
+                                <div className="skill-card row me-5 justify-content-center" key={skillIndex}>
+                                    <h5 className='skill-item col-8'>{skill.name}</h5>
+                                    {skill.logo && (
+                                        <img src={skill.logo} alt={`${skill.name} logo`} className="skill-logo col" />
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -80,36 +92,5 @@ function Skills() {
     );
 }
 
-
-// const Skills = () => {
-//     const skillStyle = {
-//         color: "#f8f8f8",
-//         height: "50px"
-//     }
-//     return (
-//         <>
-//             <div className='row justify-content-start'>
-//                     <div className='border border-3 border-danger col-md-2 m-5'>
-//                         <h1>Typescript</h1>
-//                     </div>
-//                     <div style={skillStyle} className='border border-danger col-md-2 text-white m-5'>
-//                         Typescript
-//                     </div>
-//                     <div className='border border-3 border-danger col-md-2'>
-//                         <h1>Typescript</h1>
-//                     </div>
-//                     <div className='border border-3 border-danger col-md-2'>
-//                         <h1>Typescript</h1>
-//                     </div>
-//                     <div className='border border-3 border-danger col-md-2'>
-//                         <h1>Typescript</h1>
-//                     </div>
-//                     <div className='border border-3 border-danger col-md-2'>
-//                         <h1>Typescript</h1>
-//                     </div>
-//             </div>
-//         </>
-//     );
-// }
 
 export default Skills;

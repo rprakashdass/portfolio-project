@@ -1,6 +1,7 @@
 :root{
 /* --title: #130a1b; */
---title: #8a2be2;
+/* --title: #8a2be2; */
+--title: #00d1b2;
 --text-color : #FEFFFE;
 }
 
@@ -32,11 +33,10 @@ color: var(--title);
 align-content: center
 }
 
-#title-grad {
-height: 50px;
-width: 50%;
-background-image: linear-gradient(to left, rgba(255,0,0,0), #130a1b);
-color: #fff;
+.section-title {
+    font-weight: bolder;
+    font-size: xx-large;
+    color: var(--title);
 }
 
 .pointer{

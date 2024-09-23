@@ -5,47 +5,38 @@ import Projects from './components/Projects.jsx';
 import About from './components/About.jsx';
 import { SocialMedia, Connect } from './components/Socialmedia.jsx';
 import ResumeSection from './components/Resume.jsx';
-import { useEffect, useState } from 'react';
 
-function App() {
-  const [activeSection, setActiveSection] = useState('about');
 
-  const handleScroll = () => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top >= 0 && rect.top < window.innerHeight) {
-        setActiveSection(section.id);
-      }
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+function App(){
   return (
     <main className='app container-fluid'>
       <div style={{ position: "absolute", left: "0", top: "0" }}>
         <Header />
       </div>
-      <section id="about" className={activeSection === 'about' ? 'active' : ''} style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+
+      <section id="about" style={{ minHeight: "100vh"}} className='mt-5'>
         <About />
       </section>
-      <section id="skills" className={activeSection === 'skills' ? 'active' : ''}>
+
+      <h2 className='section-title'><center>Skills</center></h2>
+      <section id="skills" className='m-5'>
         <Skills />
       </section>
-      <section id="projects" className={activeSection === 'projects' ? 'active' : ''}>
+
+      <h2 className='section-title'><center>Projects</center></h2>
+      <section id="projects">
         <Projects />
       </section>
-      <section id="resume" className={activeSection === 'resume' ? 'active' : ''}>
+
+      <section id="resume">
         <ResumeSection />
       </section>
-      <section id="contact" className={activeSection === 'contact' ? 'active' : ''}>
-        <Connect />
+
+      <section id='social-media'>
+        <Connect/>
+        <SocialMedia />
       </section>
-      <SocialMedia />
+
     </main>
   );
 }

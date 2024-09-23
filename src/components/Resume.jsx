@@ -9,7 +9,7 @@ const ResumeSection = () => {
             <p style={{ marginBottom: "20px" }}>
                 Whether you are looking for a full-time employee or a freelance expert, I’m available for opportunities.
             </p>
-            <div 
+            <div
                 className="resume-download"
                 style={{
                     display: "inline-flex",

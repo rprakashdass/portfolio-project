@@ -44,7 +44,7 @@ function Connect(){
                 <img src={githubIcon} alt="GitHub" className="platform-icon" />
                 <div className="platform-content">
                     <h2 className='text-white'>GitHub: Explore My Projects</h2>
-                    <p>
+                    <p className='text-white'>
                         On GitHub, you can explore my technical projects, including full-stack development,
                         machine learning models, and open-source contributions.
                         I showcase detailed code, project architecture, and documentation to help others.
@@ -60,7 +60,7 @@ function Connect(){
                 <img src={linkedinIcon} alt="LinkedIn" className="platform-icon" />
                 <div className="platform-content">
                     <h2>LinkedIn: Lets Collaborate</h2>
-                    <p>
+                    <p className='text-white'>
                         On LinkedIn, I focus on professional networking, collaboration opportunities, 
                         and showcasing my expertise in AI, ML, and software development. 
                         Feel free to connect for professional inquiries, job opportunities, or collaborations on innovative projects.
@@ -77,8 +77,6 @@ function Connect(){
 const SocialMedia = () => {
     return (
         <section id="social-media" className="social-media-section">
-            {/* Highlighted GitHub and LinkedIn */}
-            {/* Other Social Media Icons */}
             <div className="secondary-icons">
                 {socialmedia.map((media, index) => (
                     <a key={index} href={media.link} target="_blank" rel="noopener noreferrer">
