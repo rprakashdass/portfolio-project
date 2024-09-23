@@ -44,7 +44,7 @@ function About() {
         <img src={avatar} alt="Avatar" style={avatarStyle} />
         <h1 style={highlightText}>Hi, I’m Prakash Dass</h1>
         <p style={descriptionText}>
-          I’m a passionate AIML engineer dedicated to solving problems through technology. 
+          I’m an aspiring AIML engineer dedicated to solving problems through technology. 
           I focus on creating cutting-edge AI solutions while fostering innovation. 
           Let’s work together to make impactful innovations!
         </p>
