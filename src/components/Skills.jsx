@@ -17,7 +17,6 @@ import flask from '/logos/flask.svg';
 // import sqlite from '/logos/css.svg';
 // import git from '/logos/css.svg';
 // import figma from '/logos/css.svg';
-import docker from '/logos/docker.svg';
 
 
 
@@ -36,12 +35,17 @@ const skills = {
         { name: 'JavaScript', logo: js },
     ],
     'frameworks': [
-        { name: 'React', logo: react },
         { name: 'Node.js', logo: node },
         { name: 'Express.js', logo: express },
         { name: 'Flask', logo: flask},
         { name: 'Django', logo: dj },
         { name: 'Tensorflow', logo: '' },
+    ],
+    'Libraries': [
+        { name: 'React', logo: react },
+        { name: 'Pandas', logo: ''},
+        { name: 'Matplotlib', logo: ''},
+        { name: 'Seaborn', logo: ''},
     ],
     'databases': [
         { name: 'MongoDB', logo: '' },
@@ -50,7 +54,8 @@ const skills = {
     ],
     'tools': [
         { name: 'Git', logo: '' },
-        { name: 'Docker', logo: docker },
+        { name: 'Scikit-learn', logo: '' },
+        { name: 'keras', logo: '' },
         { name: 'Figma', logo: '' },
     ],
 };

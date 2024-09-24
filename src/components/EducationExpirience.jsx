@@ -100,7 +100,7 @@ function EducationSection() {
     return (
         <section className='' style={sectionStyle}>
         <div className="education-section" style={borderStyle}>
-            <h2 className="text-white">Academics</h2>
+            <h2 className="text-white"><center>Academics</center></h2>
             <EducationCard
             degree="Bachelor of Technology in Artificial Intelligence and Machine Learning"
             institution="Sri Shakthi Institute of Engineering and Technology"
@@ -109,7 +109,7 @@ function EducationSection() {
             />
         </div>
         <div className='mt-5' style={borderStyle}>
-            <h2 className="text-white">Volunteer Experience</h2>
+            <h2 className="text-white"><center>Volunteer Experience</center></h2>
             <VolunteerExperienceCard
                 role="Community Service Director"
                 organization="Rotaract Club of Sri Shakthi Institute"
