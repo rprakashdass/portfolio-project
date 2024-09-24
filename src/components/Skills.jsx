@@ -54,8 +54,6 @@ const skills = {
     ],
     'tools': [
         { name: 'Git', logo: '' },
-        { name: 'Scikit-learn', logo: '' },
-        { name: 'keras', logo: '' },
         { name: 'Figma', logo: '' },
     ],
 };
