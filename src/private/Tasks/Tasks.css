@@ -1,0 +1,44 @@
+/* Tasks.css */
+
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+  }
+  
+  tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    th, td {
+      padding: 8px;
+      font-size: 14px; /* Smaller text on mobile */
+    }
+  
+    th {
+      font-size: 16px; /* Slightly larger header text */
+    }
+  }
+  
