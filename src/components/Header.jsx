@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <header className="" style={{position:"fixed" ,borderBottom: "1px solid #2E2E2E", backgroundColor: "#000101", zIndex: "1", width: "100%"}} >
@@ -33,6 +35,10 @@ const Header = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#social-media">Social Media</a>
+                            </li>
+                            <li className="nav-item">
+                                <Link to={"/tasks"} >Tasks</Link>
+                                {/* <a className="nav-link" href="#social-media">Tasks</a> */}
                             </li>
                         </ul>
                     </div>
