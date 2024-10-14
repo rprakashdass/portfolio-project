@@ -11,7 +11,7 @@ import react from '/logos/react.svg';
 import node from '/logos/node.png';
 import dj from '/logos/django.svg';
 import express from '/logos/express.png';
-import flask from '/logos/flask.svg';
+import flask from '/flask-100.svg';
 // import mangodb from '/logos/mangodb.svg';
 // import sql from '/logos/sql.svg';
 // import sqlite from '/logos/css.svg';
