@@ -9,7 +9,7 @@ import './index.css'
 import App from './App.jsx'
 
 const route = createBrowserRouter([
-  {path: "/portfolio/", element: <App/>}
+  {path: "/", element: <App/>}
 ])
 
 createRoot(document.getElementById('root')).render(
