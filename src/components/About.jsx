@@ -1,5 +1,7 @@
 // Image
 import avatar from '/logos/me.png';
+import Portfolio from '../Pages/Portfolio/Portfolio';
+import { Link } from 'react-router-dom';
 
 function About() {
   const containerStyle = {
@@ -48,7 +50,7 @@ function About() {
           I focus on creating cutting-edge AI solutions while fostering innovation. 
           Let’s work together to make impactful innovations!
         </p>
-        <button style={buttonStyle}><a href='#education'>Explore</a></button>
+        <button style={buttonStyle}><Link to={"Portfolio"} >Explore</Link></button>
       </div>
     </section>
   );
