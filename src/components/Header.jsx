@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Projects from "../Pages/Portfolio/components/Projects";
-import Portfolio from "../Pages/Portfolio/Portfolio";
 
 const Header = () => {
     return (
@@ -24,19 +22,19 @@ const Header = () => {
                                 <a className="nav-link" href="#about">About Me</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#projects">Products</a>
+                                <a className="nav-link" href="#education">Education</a>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/portfolio"}>Portfolio</Link>
-                                {/* <a  href="#resume">Blog</a> */}
+                                <a className="nav-link" href="#skills">Skills</a>
                             </li>
-
                             <li className="nav-item">
-                                <a className="nav-link" href="#blog">Blogs</a>
+                                <a className="nav-link" href="#projects">Projects</a>
                             </li>
-
                             <li className="nav-item">
-                                <a className="nav-link" href="#social-media">Contact</a>
+                                <a className="nav-link" href="#resume">Resume</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#social-media">Social Media</a>
                             </li>
                         </ul>
                     </div>
